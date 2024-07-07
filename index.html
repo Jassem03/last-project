@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word game</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="/style.css">
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="/main.js"></script>
+</head>
+<body>
+    <nav>
+      <img src="logo.png" alt="imagine a logo" width="60px" height="40px" id="logo" >
+        <a href="/home.html">Home</a>
+        <a href="#" class="rules">Rules</a>
+          <div class="rules-content">
+            <p >Here is a brief explanation how the game does work :<br>Firstly you should pick the genra<br>From there the game will begin ;<br> you should guess the word within 7 attempts<br>there is small hints when u select the category <br> (tho if the word was hard and u could't find it<br> don't worry there is various hints may help you )<br></p></div>
+      </nav>
+    <section id="main">
+    </section>
+    <section id="game" >
+      <input type="text" id="choice" placeholder="Enter your guess">
+      <button id="replay" type="button" onclick="reload()" disabled>Play again</button>
+      <button id="help" type="button" onclick="hintPlus()" disabled>Hint ?</button>
+      <button id="surrender" type="button" onclick="lost();disableAll()" disabled>Withdraw</button>
+      <button id="check" type="submit" onclick="start()">Submit</button><br>
+    </section>
+    <div class="alert_container">
+    <p id="alert" hidden>  
+    <strong>You lost !</strong></p>
+    <p id="alert_done" hidden>
+    <strong>Well Done 😉! </strong> 
+    </p>
+    <p id="alert_danger" hidden>
+    </p>
+    </div>
+    <section>
+        <a href="/index.html"><button id="click" class="button-0">Play now</button></a>
+      </section>
+</body>
+</html>
